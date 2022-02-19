@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'joke.dart';
+import 'jokes.dart';
+
+String capitalize(String s) => s[0].toUpperCase() + s.substring(1);
 
 class Category extends StatelessWidget {
   final String name;
@@ -24,7 +26,7 @@ class Category extends StatelessWidget {
             showBottomSheet(
                 context: context,
                 builder: (BuildContext context) {
-                  return Joke(category: name);
+                  return Jokes(category: name, joke: "");
                 });
           },
           child: Padding(
@@ -40,7 +42,7 @@ class Category extends StatelessWidget {
                   ),
                 ),
                 Center(
-                  child: Text(name,
+                  child: Text(capitalize(name),
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                           fontWeight: FontWeight.w600,

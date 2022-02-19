@@ -61,10 +61,10 @@ class ShowJoke extends StatelessWidget {
                 style: const TextStyle(
                   fontWeight: FontWeight.w700,
                   fontSize: 30,
-                  color: Color.fromARGB(255, 240, 136, 18),
+                  color: Color.fromARGB(255, 69, 31, 112),
                 ))),
         Padding(
-            padding: const EdgeInsets.fromLTRB(40, 20, 40, 30),
+            padding: const EdgeInsets.fromLTRB(40, 20, 40, 90),
             child: Text(capitalize(joke),
                 textAlign: TextAlign.center,
                 style: const TextStyle(
@@ -72,27 +72,30 @@ class ShowJoke extends StatelessWidget {
                   fontSize: 20,
                   color: Color.fromARGB(255, 49, 48, 48),
                 ))),
-        Expanded(
+        Container(
+            height: 50,
+            width: 110,
+            color: const Color.fromARGB(255, 69, 31, 112),
             child: Padding(
-                padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
                 child: InkWell(
+                    hoverColor: const Color.fromARGB(255, 32, 9, 58),
+                    highlightColor: const Color.fromARGB(255, 0, 0, 0),
                     onTap: () {
-                      ScaffoldMessenger.of(context)
-                          .showSnackBar(const SnackBar(content: Text('Tap')));
+                      Navigator.pop(context);
+                      showBottomSheet(
+                          context: context,
+                          builder: (BuildContext context) =>
+                              Joke(category: category));
                     },
-                    child: const SizedBox(
-                        height: 100,
-                        width: 150,
-                        child: Padding(
-                            padding: EdgeInsets.all(12.0),
-                            child: Center(
-                              child: Text('Flat Button',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 17,
-                                    color: Color.fromARGB(255, 209, 174, 248),
-                                  )),
-                            ))))))
+                    child: const Center(
+                      child: Text('Next',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 17,
+                            color: Color.fromARGB(255, 255, 255, 255),
+                          )),
+                    ))))
       ],
     ))));
   }
