@@ -2,7 +2,9 @@
 
 ## :page_facing_up: Overview
 
-This is a cross-platform Flutter application. It works with [chucknorris.io API](https://api.chucknorris.io/). The app allows user to get jokes in three different ways. Jokes are fetched from the API.
+This is a cross-platform Flutter application. It works with [chucknorris.io API](https://api.chucknorris.io/). The app allows user to get jokes in three different ways. Jokes are fetched from the API. 
+
+:joystick: APK can be downloaded from [here](https://drive.google.com/file/d/1deVbrcVeWSA1jQ-3Lij8NkxU_gjbfBAw/view?usp=sharing).
 
 ## :iphone: Functionality
 
