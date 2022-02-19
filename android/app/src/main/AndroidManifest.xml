@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hw">
-   <application
+    <uses-permission android:name="android.permission.INTERNET" />
+   <applicatin
         android:label="CN jokes"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
